@@ -1,9 +1,11 @@
 class CompaniesController < ApplicationController
+  include Pagy::Backend
   before_action :set_company, only: %i[ show edit update destroy ]
 
   # GET /companies or /companies.json
   def index
     @companies = Company.all
+    @pagy, @companies = pagy(@companies)
   end
 
   # GET /companies/1 or /companies/1.json

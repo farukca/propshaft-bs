@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @company %>
+<%= render "companies/profile", company: @company %>
 
 <div>
   <%= link_to "Edit this company", edit_company_path(@company) %> |

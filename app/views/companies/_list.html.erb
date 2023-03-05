@@ -1,0 +1,17 @@
+<table id="companies_list_table" class="table table-striped table-bordered">
+  <thead id="companies_list_thead">
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>City</th>
+      <th>Country</th>
+    </tr>
+  </thead>
+  <tbody id="companies_list_tbody">
+    <%= render objects %>
+  </tbody>
+</table>
+<div class="pagination">
+  <%== pagy_bootstrap_nav(@pagy) %>
+</div>

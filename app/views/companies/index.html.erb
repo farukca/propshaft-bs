@@ -2,13 +2,8 @@
 
 <h1>Companies</h1>
 
-<div id="companies">
-  <% @companies.each do |company| %>
-    <%= render company %>
-    <p>
-      <%= link_to "Show this company", company %>
-    </p>
-  <% end %>
+<div id="companies_list">
+  <%= render "companies/list", objects: @companies %>
 </div>
 
 <%= link_to "New company", new_company_path, class: "btn btn-primary" %>
